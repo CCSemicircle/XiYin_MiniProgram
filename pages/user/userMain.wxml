@@ -1,0 +1,59 @@
+<!--pages/user/userMain.wxml-->
+<view class="title" style="justify-content:space-between;">
+<image class="icon" src="../../icons/addUser.png" style="padding-left:20rpx;" bindtap="searchUser"></image>
+<text>我</text>
+<image class="icon" src="../../icons/setting.png" style="padding-right:20rpx;" bindtap="toSetting"></image>
+</view>
+
+<!--顶部信息栏-->
+<view class="topBar">
+  <image class="mainAvatar" src="{{user.avatar}}" bindtap="updateAvatar"></image>
+  <view class="infoBar" bindtap="updateInfo">
+    <view class="name" bindtap="updateInfo">
+      <text class="font">昵称：</text>
+      <text class="font">{{user.name}}</text>
+    </view>
+    <view class="name">
+      <text class="font">ID：</text>
+      <text class="font">{{user.uid}}</text>
+    </view>
+    <view class="info" bindtap="updateInfo">
+      <text class="font">{{user.sex?'男':'女'}}</text>
+      <text class="font">{{user.age}}</text>
+      <text class="font">{{user.region[0]}}-{{user.region[1]}}</text>
+    </view>
+  </view>
+</view>
+
+<!--社交栏-->
+<view class="social">
+  <view class="socialItem" bindtap="toMyPost">稀音</view>
+  <view class="socialItem" bindtap="toMyFriend" id="myFollows">关注</view>
+  <view class="socialItem" bindtap="toMyFriend" id="myFans">粉丝</view>
+</view>
+
+<!--其他信息栏-->
+<view class="otherBar" bindtap="updateIntro">
+    <text class="font">简介：</text>
+    <text class="font" wx:if="{{user.intro!=null}}">{{user.intro}}</text>
+    <image class="icon" src="../../icons/edit.png"></image>
+</view>
+
+<view class="otherBar" bindtap="updateInterest">
+  <text class="font">兴趣：</text>
+  <view class="lable">
+    <view class="lableItem" wx:for="{{user.interests}}" wx:key="index">{{item}}</view>
+  </view>
+  <image class="icon" src="../../icons/edit.png"></image>
+</view>
+
+<view class="otherBar">
+  <text class="font">照片墙：</text>
+</view>
+
+<view class="photoWall">
+  <view  wx:for="{{user.imgs}}" wx:key="index">
+    <image class="photo" src="{{item}}"></image>
+  </view>
+  <image class="photo" src="../../icons/add.png" bindtap="addPhoto"></image>
+</view>

@@ -1,0 +1,43 @@
+<!--pages/chat/chating/chating.wxml-->
+<view class="title" style="position:fixed;top:0rpx;z-index:20;">{{user.name}}</view>
+
+<view>
+
+  <scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+    <!-- <view class='scrollMsg'> -->
+    <block wx:key="index" wx:for='{{msgList}}' wx:for-index="index">
+
+      <!-- 单个消息，对方发出（左） -->
+      <view wx:if='{{item.toUid== uid}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{user.avatar}}'></image>
+        </view>
+        <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='../../../icons/left.png' mode='widthFix'></image>
+        </view>
+        <view class='leftMsg'>{{item.msgContent}}</view>
+      </view>
+
+      <!-- 单个消息，用户发出（右） -->
+      <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+        <view class='rightMsg'>{{item.msgContent}}</view>
+        <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='../../../icons/right.png' mode='widthFix'></image>
+        </view>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{avatar}}'></image>
+        </view>
+      </view>
+
+    </block>
+
+    <!-- 占位 -->
+    <view style='width: 100%; height: 18vw;'></view>
+  </scroll-view>
+
+  <view class='inputRoom' style='bottom: {{inputBottom}}'>
+    <image style='width: 10vw; height: 10vh; margin-left: 3.2vw;' src='../../../icons/image.png' mode='widthFix'></image>
+    <input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' bindinput="inputValue" confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+    <button class='btn' style="width:180rpx;height:70rpx;" bindtap="sendClick">发送</button>
+  </view>
+</view>

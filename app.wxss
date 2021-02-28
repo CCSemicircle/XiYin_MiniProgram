@@ -1,0 +1,113 @@
+/**app.wxss**/
+
+/*一般小图标*/
+.icon{
+  width:50rpx;
+  height:50rpx;
+}
+
+/*输入框提示字体*/
+.placehoderFont{
+  font-size: 25rpx;
+}
+
+/*一般字体*/
+.font{
+  font-size: 30rpx;
+  color:#1296db;
+}
+
+/*一般栏-亮蓝色*/
+.bar{
+  background: #99ccff;
+  height:80rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rpx;
+}
+
+/*头像*/
+.avatar{
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+}
+
+/*标题栏*/
+.title{
+  background: #99ccff;
+  height:80rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rpx;
+  font-size: 40rpx;
+  color:#1296db;
+  justify-content:center;
+}
+
+/*右侧带有图标的功能栏*/
+.imgRightBar{
+  width: 100%;
+  height: 80rpx;
+  margin-bottom: 5rpx;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  color: #1296db;
+  border: 3rpx solid #1296db;
+}
+
+/*一般输入表单*/
+.inputBar{
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  line-height:70rpx;
+}
+
+.inputTxt{
+  width: 150rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: #1296db;
+  border: 3rpx solid #1296db;
+}
+
+.input{
+  width:545rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  color:#1296db;
+  border: 3rpx solid #1296db;
+}
+
+/*一般按钮*/
+.btn{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  color:#1296db;
+  border: 3rpx solid #1296db;
+  height:fit-content;
+  background:#ffffff;
+}
+
+/*一般功能栏*/
+.functionBar{
+  border: 3rpx solid #1296db;
+  height:80rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rpx;
+  padding-left:40rpx;
+  font-size:30rpx;
+  color:#1296db;
+}

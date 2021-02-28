@@ -1,0 +1,38 @@
+<!--pages/login/login.wxml-->
+<!--背景图-->
+<view class = "login-box" >
+  <image class="background"src='../../icons/loginBackground.jpg' mode="widthFix"></image>
+</view>
+
+<!--头部标题-->
+<view class="head">
+	<view class="headline" style="padding-left:170rpx;">稀音</view>
+	<view class="headline" style="padding-left:270rpx;">寻觅稀世知音</view>
+</view>
+
+<!--登录-->
+<view class="login">
+	<view class="inputLine">
+		<image class="icon" src="../../icons/phone.png"></image>
+		<input class="input" bindinput="inputPhone"></input>
+	</view>
+	<view class="inputLine">
+		<image class="icon" src="../../icons/pwd.png"></image>
+		<input class="input" password="true" type="done" bindconfirm="login" bindinput="inputPwd"></input>
+	</view>
+</view>
+
+<button class="btn" bindtap="login">登录</button>
+
+<!--其他-->
+<view class="other">
+	<text bindtap="toFindPwd">忘记密码</text>
+	<text bindtap="touristVisit">游客访问</text>
+	<text bindtap="toRegister">注册账号</text>
+</view>
+
+<!--诗句-->
+<view class="head" style="margin-top:0rpx;">
+	<view class="headline" style="text-align:center;font-size:40rpx;">知音世所稀</view>
+	<view class="headline" style="font-size:40rpx;padding-left:530rpx;">——孟浩然</view>
+</view>

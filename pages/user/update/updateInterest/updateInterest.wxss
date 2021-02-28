@@ -1,0 +1,20 @@
+/* pages/user/updateInterest/updateInterest.wxss */
+.inContent{
+  display: flex;
+  margin-top: 10rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  width:710rpx;
+  height:400rpx;
+  border: 3rpx solid #1296db;
+}
+
+.item{
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  width: fit-content;
+  height: 40rpx;
+  border: 3rpx solid #1296db;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+  color:#1296db;
+}

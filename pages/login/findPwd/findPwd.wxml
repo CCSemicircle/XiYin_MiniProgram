@@ -1,0 +1,32 @@
+<!--pages/login/findPwd/findPwd.wxml-->
+<view class="title">修改密码</view>
+
+  <view class="inputBar">
+    <text class="inputTxt" style="text-align:right;">手机号：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" style="width:320rpx;"  bindinput="inputPhone"></input>
+    <button class="btn" bindtap="getCode" style="width:fit-content;font-size:25rpx;height:70rpx;">获取验证码</button>
+  </view>
+
+  <view class="inputBar">
+    <text class="inputTxt" style="text-align:right;">验证码：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" bindinput="inputCode"></input>
+  </view>
+
+    <button class="btn" bindtap="checkCode" style="width:fit-content;">下一步</button>
+
+    <view class="inputBar" hidden="{{isHidden}}">
+    <text class="inputTxt" style="text-align:right;">新密码：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" focus="true" bindinput="inputPwd0"></input>
+  </view>
+
+  <view class="inputBar" hidden="{{isHidden}}">
+    <text class="inputTxt">再次确认：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" style="width:545rpx;" bindinput="inputPwd1"></input>
+  </view>
+
+ <button class="btn" bindtap="submitPwd" hidden="{{isHidden}}" style="width:fit-content;">完成</button>
+

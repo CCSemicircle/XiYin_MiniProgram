@@ -1,0 +1,5 @@
+<!--component/searchBar/searchBar.wxml-->
+<view class="bar">
+  <image class="icon" src="../../icons/search.png"></image>
+  <input class="font" confirm-type="search" value="{{val}}" placeholder="查找" placeholder-class="placeholderFont" ></input>
+</view>

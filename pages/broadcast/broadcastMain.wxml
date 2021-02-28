@@ -1,0 +1,49 @@
+<!--pages/broadcast/broadcastMain.wxml-->
+<!--顶层功能栏-->
+<view class="bar">
+
+	<view class="bar" style="border:3rpx solid #ffffff;width:20%;justify-content:center;" bindtap="getLocation">
+		<image class="icon" src="../../icons/location.png"></image>
+		<text class="font">{{location[1]}}</text>
+	</view>
+
+	<view class="bar" style="border:3rpx solid #ffffff;width:70%;">
+		<image class="icon" src="../../icons/search.png" bindtap="search"></image>
+		<input class="font" confirm-type="search" value="{{value}}" placeholder="查找" placeholder-class="placeholderFont" bindconfirm="search" bindinput="inputValue"></input>
+	</view>
+
+	<view class="bar" style="border:3rpx solid #ffffff;width:10%;justify-content:center;" bindtap="toAdd">
+		<image class="icon" src="../../icons/addPost.png"></image>
+	</view>
+</view>
+
+<!--导航栏-->
+<scroll-view scroll-x="true" enable-flex="true" class="navBar">
+	<view class="navItem" wx:for="{{types}}" wx:key="index" data-index="{{index}}" bindtap="onTapNav">
+		<view style="height:40rpx;"></view>
+		<image class="icon" wx:if="{{index!=currTab}}" src="../../icons/type.png"></image>
+		<image class="icon" wx:if="{{index==currTab}}" src="../../icons/typeSelected.png"></image>
+		<text class="font" style="color: {{index==currTab? '#13227a' : '#1296db'}};">{{item}}</text>
+	</view>
+</scroll-view>
+
+<!--帖子-->
+<scroll-view>
+	<view class="postBar" wx:for="{{posts}}" wx:if="{{currTab==0 || currTab == item.postTypeId}}" wx:key="index" data-id="{{item.id}}" bindtap="up">
+		<view class="header">
+			<view class="poster">
+				<image class="avatar" src="{{item.user.avatar}}"></image>
+				<text class="font">{{item.user.name}}</text>
+			</view>
+			<text class="font">{{item.postTime}}</text>
+		</view>
+		<text class="content">{{item.content}}</text>
+		<view class="operation">
+			<image class="icon" src="../../../../../icons/up.png"></image>
+		</view>
+		<view style="display:flex; width:100%; height:fit-content;">
+			<view class="smallFont" wx:for="{{item.upUsers}}" wx:key="index" wx:for-item="user">{{user.name  + " . "}}</view>
+			<view class="smallFont" wx:if="{{item.upList !=null && item.upList.length !=0}}">已顶帖</view>
+		</view>
+	</view>
+</scroll-view>

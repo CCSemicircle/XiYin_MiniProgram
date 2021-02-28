@@ -1,0 +1,38 @@
+<!--pages/login/register/register.wxml-->
+<!--pages/login/findPwd/findPwd.wxml-->
+<view class="title">注册用户</view>
+
+  <view class="inputBar">
+    <text class="inputTxt" style="text-align:right;">手机号：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" style="width:320rpx;"  bindinput="inputPhone"></input>
+    <button class="btn" bindtap="getCode" style="width:fit-content;font-size:25rpx;height:70rpx;">获取验证码</button>
+  </view>
+
+  <view class="inputBar">
+    <text class="inputTxt" style="text-align:right;">验证码：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" bindinput="inputCode"></input>
+  </view>
+
+  <view class="inputBar">
+    <text class="inputTxt" style="width:150rpx;">输入昵称：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" bindinput="inputName"></input>
+  </view>
+
+  <view class="inputBar">
+    <text class="inputTxt" style="width:150rpx;">输入密码：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" bindinput="inputPwd0"></input>
+  </view>
+
+  <view class="inputBar">
+    <text class="inputTxt" style="width:150rpx;">确认密码：</text>
+    <view style="width:20rpx;"></view>
+    <input class="input" bindinput="inputPwd1"></input>
+  </view>
+
+ <button class="btn" bindtap="check" style="width:fit-content;">注册</button>
+
+

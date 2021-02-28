@@ -1,0 +1,65 @@
+/* pages/broadcast/broadcastMain.wxss */
+/*顶部导航栏*/
+.navBar{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  background: #99ccff;
+  align-items: center;
+  margin-top: 5rpx;
+  white-space: nowrap; 
+}
+
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: fit-content;
+}
+
+/*帖子*/
+.postBar{
+  height:fit-content;
+  width:100%;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  align-items: center;
+  border: 3rpx solid #1296db;
+  margin-top: 5rpx;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.poster{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.content{
+  padding-top: 10rpx;
+  padding-left: 40rpx;
+  font-size: 30rpx;
+  color:#1296db;
+  align-items: center;
+  word-wrap:break-word;
+}
+
+.operation{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.smallFont{
+  color:#1296db;
+  font-size: 25rpx;
+}
+

@@ -1,0 +1,33 @@
+<!--pages/chat/chatMain.wxml-->
+<view class="bar" style="border-radius: 40px;">
+	<image class="icon" src="../../icons/search.png" bindtap="search"></image>
+	<input class="font" bindinput="inputValue" confirm-type="search" value="{{value}}" placeholder="查找关注/粉丝" placeholder-class="placeholderFont" bindconfirm="search"></input>
+</view>
+
+<!--聊天信息框-->
+<scroll-view wx:if="{{!boolSearch}}">
+	<view class="chatBar" wx:for="{{msgs}}" wx:key="time" bindtap="msgToChat" data-toUid="{{item.toUid}}" data-fromUid="{{item.fromUid}}">
+		<view class="header">
+			<view class="chater">
+				<image class="avatar" src="{{item.user.avatar}}"></image>
+				<text class="font">{{item.user.name}}</text>
+			</view>
+			<text class="font">{{item.msgTime}}</text>
+		</view>
+		<view class="content">
+		<text class="msg">{{item.msgContent}}</text>
+		<image class="icon" wx:if="{{item.msgState == 0 && item.fromUid != uid}}" src="../../../../../icons/point.png"></image>
+		</view>
+	</view>
+</scroll-view>
+
+<!--好友检索框-->
+<scroll-view wx:if="{{boolSearch}}">
+  <view wx:for="{{users}}" wx:key="id" class="imgRightBar" bindtap="friendToChat" data-toUid="{{item.uid}}">
+    <view style="margin-left:20rpx;display:flex;align-items:center;">
+      <image class="icon" src="{{item.avatar}}" style=" border-radius: 50%;"></image>
+      <text >{{item.name}}</text>
+    </view>
+    <image class="icon" src="../../icons/next.png"></image>
+  </view>
+</scroll-view>

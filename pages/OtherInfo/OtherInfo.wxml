@@ -1,0 +1,57 @@
+<!--pages/user/OtherInfo/OtherInfo.wxml-->
+<view class="title">我</view>
+
+<!--顶部信息栏-->
+<view class="topBar">
+	<image class="mainAvatar" src="{{user.avatar}}"></image>
+	<view class="infoBar">
+		<view class="name">
+			<text class="font">昵称：</text>
+			<text class="font">{{user.name}}</text>
+		</view>
+		<view class="name">
+			<text class="font">ID：</text>
+			<text class="font">{{user.uid}}</text>
+		</view>
+		<view class="info">
+			<text class="font">{{user.sex?'男':'女'}}</text>
+			<text class="font">{{user.age}}</text>
+			<text class="font">{{region[0]}}-{{region[1]}}</text>
+		</view>
+	</view>
+</view>
+
+<!--社交栏-->
+<view class="social">
+	<view class="socialItem" bindtap="toMyPost">稀音</view>
+	<view class="socialItem" bindtap="toMyFriend" id="myFollows">关注</view>
+	<view class="socialItem" bindtap="toMyFriend" id="myFans">粉丝</view>
+</view>
+
+<!--其他信息栏-->
+<view class="otherBar">
+	<text class="font">简介：</text>
+	<text class="font">{{user.intro}}</text>
+</view>
+
+<view class="otherBar">
+	<text class="font">兴趣：</text>
+	<view class="lable">
+		<view class="lableItem" wx:for="{{interests}}" wx:key="index">{{item}}</view>
+	</view>
+</view>
+
+<view class="otherBar">
+	<text class="font">照片墙：</text>
+</view>
+
+<view class="photoWall">
+	<view wx:for="{{user.imgs}}" wx:key="index">
+		<image class="photo" src="{{item}}"></image>
+	</view>
+</view>
+
+<view style="display:flex;">
+	<button class="followBtn" bindtap="onTapFollowBtn" style="width:50%;height: fit-content;">{{followTxt[index]}}</button>
+	<button class="followBtn" bindtap="toChat" style="width:50%;height: fit-content;left:380rpx;">发起聊天</button>
+</view>

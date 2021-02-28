@@ -1,0 +1,94 @@
+/* pages/user/OtherInfo/OtherInfo.wxss */
+/*顶部信息栏*/
+.topBar{
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  border: 3rpx solid #1296db;
+}
+
+.mainAvatar{
+  width: 30%;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+}
+
+.infoBar{
+  width: 70%;
+  align-items: center;
+}
+
+.info{
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+/*社交栏*/
+.social{
+  height: 80rpx;
+  width: 100%;
+  border:3rpx solid #1296db;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.socialItem{
+  flex-grow: 1;
+  font-size: 30rpx;
+  color:#1296db;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/*其他信息栏*/
+.otherBar{
+  padding-left: 10rpx;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.lable{
+  width: fit-content;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.lableItem{
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  width: fit-content;
+  height: 40rpx;
+  border: 3rpx solid #1296db;
+  border-radius: 5rpx;
+  font-size: 30rpx;
+  color:#1296db;
+}
+
+.photoWall{
+
+}
+
+.photo{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/*关注按钮*/
+.followBtn{
+  position: fixed;
+  bottom: 0rpx;
+  font-size: 30rpx;
+  color: #1296db;
+  border: 3rpx solid #1296db;
+  background:#ffffff;
+}

@@ -1,0 +1,24 @@
+/* pages/user/updateInfo/updateInfo.wxss */
+#locationTitle{
+  padding-left:50rpx;
+}
+
+#inLocation{
+  padding-left: 50rpx;
+}
+
+.addressView{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  font-size: 40rpx;
+  align-items: center;
+  justify-content: space-between;
+  color: #779dce;
+  background: #f1f0fe;
+  margin-bottom: 5rpx;
+}
+
+.addressText{
+  display: flex;
+}

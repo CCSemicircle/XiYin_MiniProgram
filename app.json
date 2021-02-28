@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/chat/chatMain",
+    "pages/broadcast/broadcastMain",
+    "pages/broadcast/addPost/addPost",
+    "pages/user/userMain",
+    "pages/user/setting/setting",
+    "pages/login/register/register",
+    "pages/login/findPwd/findPwd",
+    "pages/user/update/updateInterest/updateInterest",
+    "pages/user/update/updateIntro/updateIntro",
+    "pages/chat/chating/chating",
+    "pages/user/update/updateInfo/updateInfo",
+    "pages/user/myPost/myPost",
+    "pages/user/myFriend/myFriend",
+    "pages/OtherInfo/OtherInfo",
+    "pages/systemSetting/systemSetting",
+    "pages/user/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "稀音",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#1296db",
+    "selectedColor": "#13227a",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "icons/broadcastSelected.png",
+        "iconPath": "icons/broadcast.png",
+        "pagePath": "pages/broadcast/broadcastMain",
+        "text": "广播台"
+      },
+      {
+        "selectedIconPath": "icons/chatSelected.png",
+        "iconPath": "icons/chat.png",
+        "pagePath": "pages/chat/chatMain",
+        "text": "聊天框"
+      },
+      {
+        "selectedIconPath": "icons/userSelected.png",
+        "iconPath": "icons/user.png",
+        "pagePath": "pages/user/userMain",
+        "text": "我"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,9 @@
+<!--pages/user/setting/setting.wxml-->
+<view class="title">设置</view>
+
+<!--功能列表-->
+
+  <view bindtap="toFindPwd" class="functionBar">修改密码</view>
+
+  <view bindtap="toLogin" class="functionBar">退出登录</view>
+

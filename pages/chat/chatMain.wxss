@@ -1,0 +1,39 @@
+/* pages/chat/chatMain.wxss */
+.chatBar{
+  height:fit-content;
+  width:100%;
+  align-items: center;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border: 3rpx solid #1296db;
+  margin-top: 5rpx;
+  padding-right: 20rpx;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.chater{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.msg{
+  padding-top: 10rpx;
+  padding-left: 40rpx;
+  font-size: 30rpx;
+  color:#1296db;
+  align-items: center;
+  word-wrap:break-word;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,27 @@
+/* pages/broadcast/addPost/addPost.wxss */
+/*选择器*/
+.picker{
+  display: flex;
+  justify-content: space-between;
+  width:530rpx;
+  height: 70rpx;
+  padding-right: 10rpx;
+  display: flex;
+  flex-direction: flex-end;
+  align-items: center;
+  font-size: 30rpx;
+  border: 3rpx solid #1296db;
+  color: #1296db;
+}
+
+.inContent{
+  margin-top: 10rpx;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  width:710rpx;
+  height:400rpx;
+  font-size:30rpx;
+  color: #1296db;
+  border: 3rpx solid #1296db;
+}
+

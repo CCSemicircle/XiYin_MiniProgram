@@ -1,0 +1,8 @@
+<!--pages/user/updateIntro/updateIntro.wxml-->
+<view class="title" style="justify-content:space-between;">
+  <view class="font" bindtap="cancel">返回</view>
+  <view class="font">个人简介</view>
+  <view class="font" bindtap="submit">确定</view>
+</view>
+
+<textarea class="inContent" value="{{intro}}" confirm-type="done" maxlength="30" name="content" placeholder="简单描述自己（不超过30字）" placeholder-class="placeholderFont" bindinput="inputIntro"></textarea>

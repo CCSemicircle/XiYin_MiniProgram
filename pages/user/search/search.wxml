@@ -1,0 +1,19 @@
+<!--pages/user/search/search.wxml-->
+
+<!--搜索列表-->
+<view class="bar" style="border-radius: 40px;">
+	<image class="icon" src="../../../icons/search.png" bindtap="search"></image>
+	<input class="font" bindinput="inputValue" confirm-type="search" placeholder="输入昵称/ID" placeholder-class="placeholderFont" bindconfirm="search"></input>
+</view>
+
+<!--好友列表-->
+<scroll-view>
+  <view wx:for="{{users}}" wx:key="id" class="imgRightBar" bindtap="seeOther" data-uid="{{item.uid}}">
+    <view style="margin-left:20rpx;display:flex;align-items:center;">
+      <image class="icon" src="{{item.avatar}}" style=" border-radius: 50%;"></image>
+      <text >{{item.name}}</text>
+    </view>
+    <image class="icon" src="../../../icons/next.png"></image>
+  </view>
+</scroll-view>
+

@@ -1,0 +1,45 @@
+<!--pages/broadcast/addPost/addPost.wxml-->
+<view class="title">发布稀音</view>
+
+<form bindsubmit="submit">
+
+	<view class="inputBar">
+		<text class="inputTxt">活动类型：</text>
+		<view style="width:20rpx;"></view>
+		<view class="picker">
+			<view></view>
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{types}}" style="display:flex;justify-content:center;">
+				<view>{{types[index]}}</view>
+			</picker>
+			<image src="../../../icons/down.png" class="icon"></image>
+		</view>
+	</view>
+
+
+	<view class="inputBar">
+		<text class="inputTxt">寻友地区：</text>
+		<view style="width:20rpx;"></view>
+		<view class="picker">
+		<view></view>
+		<picker mode="region" bindchange="bindLocationChange" value="{{location}}" custom-item="{{customItem}}">
+			<view>
+				{{location[0]}}{{location[1]}}{{location[2]}}
+			</view>
+		</picker>
+		<image src="../../../icons/down.png" class="icon"></image>
+		</view>
+	</view>
+
+
+	<view class="inputBar">
+		<text class="inputTxt">具体内容：</text>
+		<view style="width:20rpx;"></view>
+	</view>
+
+
+	<textarea class="inContent" confirm-type="done" maxlength="500" placeholder="寻友信息，不超过300字" placeholder-class="placeholderFont" bindinput="inputContent"></textarea>
+
+
+	<button class="btn" bindtap="submit" style="width:fit-content;">发布</button>
+
+</form>

@@ -1,0 +1,79 @@
+/* pages/login/login.wxss */
+/*全局背景*/
+ .login-box {
+   height: 100%;
+ }
+  
+ .background{
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   display: block;
+   width: 100%;
+   z-index: -999;
+ }
+
+/*头部标题*/
+.head{
+  margin-top: 50rpx;
+  width: 100%;
+  height: 200rpx;
+}
+
+.headline{
+  width: 100%;
+  height: 100rpx;
+  font-size: 50rpx;
+  color: #13227a;
+  line-height: 100rpx;
+}
+
+/*登录*/
+.login{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputLine{
+  display: flex;
+  width: 80%;
+  height: 150rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.input{
+  font-size: 30rpx;
+  color: #13227a;
+  text-align: center;
+  border-top: 0rpx;
+  border-left: 0rpx;
+  border-right: 0rpx;
+  border-bottom: 3rpx solid #13227a;
+}
+
+.btn{
+  width: fit-content;
+  height: fit-content;
+  font-size: 40rpx;
+  color: #13227a;
+  border: 3rpx solid #13227a;
+  background-color:transparent;
+}
+
+/*其他*/
+.other{
+  margin-top: 150rpx;
+  width: auto;
+  height: 80rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color:#13227a;
+}

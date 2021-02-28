@@ -1,0 +1,27 @@
+/* component/searchBar/searchBar.wxss */
+/*一般小图标*/
+.icon{
+  width:50rpx;
+  height:50rpx;
+}
+
+/*输入框提示字体*/
+.placehoderFont{
+  font-size: 25rpx;
+}
+
+/*一般字体*/
+.font{
+  font-size: 30rpx;
+  color:#1296db;
+}
+
+/*一般栏-亮蓝色*/
+.bar{
+  background: #99ccff;
+  height:60rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rpx;
+}

@@ -1,0 +1,46 @@
+<!--pages/user/updateInfo/updateInfo.wxml-->
+<view class="title">修改{{navBar[index].text}}</view>
+
+<view class="imgRightBar" wx:if="{{navBar[index].type== 'name'}}">
+	<input focus="true" placeholder="不超过10个字" value="{{name}}" style="padding-left:50rpx;" confirm-type="done" bindconfirm="bindconfirm" bindfocus="bindfocus"></input>
+	<image wx:if="{{!flag}}" class="icon" src="../../../../icons/edit.png"></image>
+	<image wx:if="{{flag}}" class="icon" src="../../../../icons/done.png"></image>
+</view>
+
+
+<view class="imgRightBar" wx:if="{{navBar[index].type== 'age'}}">
+	<input focus="true" placeholder="请输入真实年龄" value="{{age}}" style="padding-left:50rpx;" confirm-type="done" bindconfirm="bindconfirm" bindfocus="bindfocus"></input>
+	<image wx:if="{{!flag}}" class="icon" src="../../../../icons/edit.png"></image>
+	<image wx:if="{{flag}}" class="icon" src="../../../../icons/done.png"></image>
+</view>
+
+<view wx:if="{{navBar[index].type== 'sex'}}">
+	<view class="imgRightBar" id="male" bindtap="onTapSexBar">
+		<text style="text-indent:50rpx;">男</text>
+		<image wx:if="{{sex==1}}" class="icon" src="../../../../icons/done.png"></image>
+	</view>
+
+	<view class="imgRightBar" id="female" bindtap="onTapSexBar">
+		<text style="text-indent:50rpx;">女</text>
+		<image wx:if="{{sex==0}}" class="icon" src="../../../../icons/done.png"></image>
+	</view>
+</view>
+
+<view wx:if="{{navBar[index].type== 'region'}}">
+	<view class="functionBar" bindtap="locating">
+		<text>国家</text>
+		<view style="padding-left:120rpx;">中国</view>
+	</view>
+
+	<view class="imgRightBar">
+		<view style="display:flex;">
+			<text style="padding-left:40rpx;width:180rpx;">省市区</text>
+			<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+				<view>
+					{{region[0]}}{{region[1]}}{{region[2]}}
+				</view>
+			</picker>
+		</view>
+		<image class="icon" src="../../../../icons/down.png" style="padding-right:30rpx;"></image>
+	</view>
+</view>
